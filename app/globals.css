@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink font-body dark:bg-[#0B1120] dark:text-white;
+}
+
+::selection {
+  background: #0ea5e9;
+  color: #ffffff;
+}
+
+.gradient-shell {
+  background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.12), transparent 45%),
+    radial-gradient(circle at 70% 20%, rgba(249, 115, 22, 0.14), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(94, 234, 212, 0.18), transparent 50%);
+}
+
+.dark .gradient-shell {
+  background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.25), transparent 45%),
+    radial-gradient(circle at 70% 20%, rgba(249, 115, 22, 0.2), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(94, 234, 212, 0.22), transparent 50%);
+}
+
+.marquee-track {
+  width: max-content;
+}
+
+.grid-overlay {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
