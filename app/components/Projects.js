@@ -22,7 +22,7 @@ const projects = [
       "Social Media",
     ],
     images: [
-      "/images/projects/Social Media Posting.png",
+      "/images/projects/Social media posting.png",
       "/images/projects/Social media posting 1.png",
     ],
   },
