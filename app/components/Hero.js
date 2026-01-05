@@ -83,31 +83,33 @@ export default function Hero() {
             <div className="flex flex-col gap-4">
               <div className="flex items-center justify-between text-xs uppercase tracking-[0.2em] text-slate dark:text-white">
                 <span>Automation Studio</span>
-                <span className="rounded-full bg-ink px-3 py-1 text-white">
+                <span className="rounded-full bg-emerald-500 px-3 py-1 text-white">
                   Live
                 </span>
               </div>
               <div className="space-y-3">
                 <p className="text-2xl font-display font-semibold text-ink dark:text-white">
-                  Workflow Orchestrator
+                  Automation Control Center
                 </p>
                 <p className="text-sm text-slate dark:text-white">
-                  Centralized dashboard for lead capture, ticket routing, and AI response
-                  drafting across your revenue stack.
+                  Orchestrates lead routing, client reporting, content production, and
+                  chatbot handoffs with AI-driven workflows built for real operations.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                {["Zapier", "n8n", "OpenAI", "Airtable"].map((tool) => (
+                {["Make.com", "n8n", "OpenAI", "Zoho CRM", "Google Workspace"].map(
+                  (tool) => (
                   <span
                     key={tool}
                     className="rounded-full bg-mist px-3 py-1 text-xs font-semibold text-ink dark:bg-white/10 dark:text-white"
                   >
                     {tool}
                   </span>
-                ))}
+                  )
+                )}
               </div>
               <button className="mt-2 rounded-2xl border border-ink/10 bg-ink/5 px-4 py-3 text-left text-sm text-ink shadow-card dark:border-white/10 dark:bg-white/10 dark:text-white">
-                Trigger last 24h automation report
+                Generate weekly automation summary
               </button>
             </div>
           </div>

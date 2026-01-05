@@ -22,20 +22,26 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-white/50 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-[#0B1120]/80">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <div>
-          <p className="text-lg font-display font-semibold text-ink dark:text-white">
+        <a href="#top" className="group">
+          <p className="text-lg font-display font-semibold text-ink transition group-hover:text-sunrise dark:text-white dark:group-hover:text-sunrise">
             Pierce Xander Giron
           </p>
           <p className="text-xs uppercase tracking-[0.2em] text-slate dark:text-slate-300">
             AI Automation Specialist
           </p>
-        </div>
+        </a>
         <nav className="hidden items-center gap-6 text-sm font-semibold text-slate md:flex dark:text-slate-300">
           <a className="transition hover:text-ink dark:hover:text-white" href="#projects">
             Projects
           </a>
           <a className="transition hover:text-ink dark:hover:text-white" href="#tools">
             Tools
+          </a>
+          <a className="transition hover:text-ink dark:hover:text-white" href="#badges">
+            Badges
+          </a>
+          <a className="transition hover:text-ink dark:hover:text-white" href="#certificates">
+            Certificates
           </a>
           <a className="transition hover:text-ink dark:hover:text-white" href="#contact">
             Contact
