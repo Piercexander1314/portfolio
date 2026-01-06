@@ -8,6 +8,7 @@ const badges = [
   { name: "Make Basics", file: "make-basics.png" },
   { name: "Make Foundation", file: "make-foundation.1.png" },
   { name: "Make Intermediate", file: "make-intermediate (1).png" },
+  { name: "Make Advanced", file: "make-advanced.png" },
 ];
 
 export default function Badges() {
@@ -27,24 +28,24 @@ export default function Badges() {
             subtitle="Verified Make.com training badges earned through hands-on automation work."
             align="center"
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {badges.map((badge) => (
-              <div
-                key={badge.name}
-                className="flex items-center justify-center rounded-3xl border border-mist bg-white p-6 shadow-card dark:border-white/10 dark:bg-white/5"
-                onContextMenu={(event) => event.preventDefault()}
-              >
-                <Image
-                  src={encodeURI(`/images/badges/${badge.file}`)}
-                  alt={`${badge.name} badge`}
-                  width={320}
-                  height={240}
-                  className="h-32 w-auto select-none object-contain"
-                  draggable={false}
-                />
-              </div>
-            ))}
-          </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {badges.map((badge) => (
+            <div
+              key={badge.name}
+              className="flex items-center justify-center rounded-3xl border border-mist bg-white p-6 shadow-card dark:border-white/10 dark:bg-white/5"
+              onContextMenu={(event) => event.preventDefault()}
+            >
+              <Image
+                src={encodeURI(`/images/badges/${badge.file}`)}
+                alt={`${badge.name} badge`}
+                width={320}
+                height={240}
+                className="h-24 w-auto select-none object-contain"
+                draggable={false}
+              />
+            </div>
+          ))}
+        </div>
         </motion.div>
       </div>
     </section>

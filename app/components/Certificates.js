@@ -26,6 +26,7 @@ const certificates = [
   { name: "Make Basics", file: "Make Basics.png" },
   { name: "Make Intermediate", file: "Make Intermediate.png" },
   { name: "Make Foundation", file: "Make foundation.png" },
+  { name: "Make Advanced", file: "MakeCertificateadvance.png" },
   {
     name: "ChatGPT Certificate",
     file: "Pierce Xander Giron - 2024-07-25 (ChatGPT).png",
@@ -53,20 +54,22 @@ export default function Certificates() {
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {certificates.map((certificate) => (
-              <div
-                key={certificate.file}
-                className="overflow-hidden rounded-3xl border border-mist bg-white p-4 shadow-card dark:border-white/10 dark:bg-white/5"
-                onContextMenu={(event) => event.preventDefault()}
-              >
+            <div
+              key={certificate.file}
+              className="overflow-hidden rounded-3xl border border-mist bg-white p-4 shadow-card dark:border-white/10 dark:bg-white"
+              onContextMenu={(event) => event.preventDefault()}
+            >
+              <div className="relative aspect-[4/3] w-full">
                 <Image
                   src={encodeURI(`/images/certificates/${certificate.file}`)}
                   alt={`${certificate.name} certificate`}
-                  width={520}
-                  height={380}
-                  className="h-48 w-full select-none object-contain"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="select-none object-contain"
                   draggable={false}
                 />
               </div>
+            </div>
             ))}
           </div>
         </motion.div>
